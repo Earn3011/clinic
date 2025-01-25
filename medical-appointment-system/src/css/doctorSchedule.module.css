@@ -1,0 +1,309 @@
+/* กำหนดสีหลัก */
+:root {
+    --primary-color: #ffffff; /* สีขาว */
+    --secondary-color: #f0f8ff; /* สีน้ำเงินอ่อนมาก */
+    --accent-color: #00bcd4; /* สีเทอร์ควอยซ์ */
+    --text-color: #333333; /* สีเทาเข้ม */
+    --background-color: #ffffff; /* สีขาว */
+
+    /* สีปุ่ม */
+    --button-color: #4caf50; /* สีเขียว */
+    --delete-button-color: #f44336; /* สีแดง */
+    --chat-button-color: #2196f3; /* สีน้ำเงิน */
+    --save-button-color: #ff9800; /* สีส้ม */
+
+    /* สีเพิ่มเติม */
+    --hover-color: #e0f2f1; /* สีฟ้าอ่อน */
+    --border-color: #b0bec5; /* สีเทา */
+
+    /* เพิ่มตัวแปรสีขาว */
+    --white-color: #ffffff; /* สีขาว */
+}
+
+/* คอนเทนเนอร์หลัก */
+.doctorScheduleContainer {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* การตกแต่งหัวเรื่อง */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    text-align: center;
+    text-shadow: 1px 1px 2px #b0bec5;
+}
+
+/* การตกแต่งตาราง */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 16px;
+}
+
+.table th {
+    background-color: #0dcab4;
+    color: var(--white-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table td {
+    background-color: #f9f9f9;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* ข้อความเมื่อไม่มีการนัดหมาย */
+.noAppointments {
+    color: var(--text-color);
+    font-size: 22px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* การตกแต่งปุ่ม */
+.button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* เพิ่มช่องว่างระหว่างไอคอนกับข้อความ */
+    color: var(--white-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.editButton {
+    background-color: var(--button-color) !important;
+}
+
+.editButton:hover {
+    background-color: #45a049 !important;
+}
+
+.chatButton {
+    background-color: var(--chat-button-color) !important;
+    position: relative;
+}
+
+.chatButton:hover {
+    background-color: #1976d2 !important;
+}
+
+.cancelButton {
+    background-color: var(--delete-button-color) !important;
+}
+
+.cancelButton:hover {
+    background-color: #d32f2f !important;
+}
+
+.saveButton {
+    background-color: var(--save-button-color) !important;
+}
+
+.saveButton:hover {
+    background-color: #fb8c00 !important;
+}
+
+/* คอนเทนเนอร์สำหรับปุ่ม */
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* แสดงจำนวนข้อความใหม่ */
+.notificationBadge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.3em;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 0.8em;
+}
+
+/* การแบ่งหน้า */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination button {
+    padding: 12px 25px;
+    margin: 0 10px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pagination button:hover {
+    background-color: #45a049;
+}
+
+.pagination button:disabled {
+    background-color: var(--accent-color);
+    cursor: not-allowed;
+}
+
+.pagination span {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+/* แถบค้นหา */
+.searchBar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.searchContainer {
+    position: relative;
+}
+
+.searchInput {
+    padding: 10px 50px 10px 20px;
+    height: 45px;
+    width: 350px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.clearButton {
+    position: absolute;
+    right: 15px;
+    top: -20%;
+    background-color: transparent;
+    color: #888;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.clearButton:hover {
+    color: #555;
+}
+
+/* ปรับแต่งอินพุตวันที่และเวลา */
+.input[type='date'],
+.input[type='time'] {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.editContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editContainer .input {
+    margin-bottom: 10px;
+}
+
+/* เพิ่มการตอบสนองต่อขนาดหน้าจอ */
+@media screen and (max-width: 768px) {
+    .table,
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+        display: block;
+    }
+    .table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .table tr {
+        margin: 0 0 1rem 0;
+    }
+    .table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+    .table td:before {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+
+    .table th,
+    .table td {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+
+    .pagination button {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+
+    .pagination span {
+      font-size: 16px;
+    }
+
+    .searchInput {
+      width: 250px;
+    }
+}

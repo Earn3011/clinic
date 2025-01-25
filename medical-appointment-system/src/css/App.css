@@ -1,0 +1,102 @@
+.user-dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: flex-start; /* จัดให้องค์ประกอบในคอลัมน์ตรงกัน */
+  }
+
+  .read-more-btn {
+    background-color: #ccf6e0; /* สีฟ้าตามธีม */
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* เพิ่มการเปลี่ยนสีแบบ smooth */
+  }
+  
+  .read-more-btn:hover {
+    background-color: #b2e7cc; /* สีเข้มขึ้นเมื่อ hover */
+  }
+  
+  
+  .left-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f0ff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    height: 100%; /* เพิ่มความสูงให้คอลัมน์ซ้ายเต็มพื้นที่ */
+  }
+  
+  .content-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #e0f0ff;
+    border-radius: 10px;
+    padding: 15px; /* ลด padding เพื่อให้มีพื้นที่มากขึ้น */
+    box-sizing: border-box; /* รวม padding ในความกว้าง */
+    height: 100%;
+  }
+  
+  .recent-post {
+    background-color: #e0f0ff;
+    border-radius: 10px;
+    padding: 15px; /* ลด padding ของ Recent Post */
+    width: 100%;
+    box-sizing: border-box; /* รวม padding ในความกว้าง */
+  }
+  
+  .post-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .post-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+  }
+  
+  .post-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .recent-post-title {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  

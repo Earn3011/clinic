@@ -1,0 +1,302 @@
+/* กำหนดสีหลัก */
+:root {
+  --primary-color: #e0f0ff; /* สีเทาอ่อน */
+  --secondary-color: #e0e0e0; /* สีเทาอ่อนกว่า */
+  --accent-color: #cccccc; /* สีเทาเข้มขึ้นเล็กน้อย */
+  --text-color: #333333; /* สีเข้มสำหรับข้อความ */
+  --background-color: #ffffff; /* สีขาว */
+  --white-color: #ffffff;
+
+  /* สีปุ่ม */
+  --button-color: #8fe5a9; /* สีเขียวอ่อน */
+  --delete-button-color: #ff4d4d; /* สีแดง */
+  --chat-button-color: #4da6ff; /* สีน้ำเงิน */
+}
+
+/* การตั้งค่าฟอนต์ */
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+/* คอนเทนเนอร์หลัก */
+.pageContainer {
+  max-width: 1400px; /* เพิ่มความกว้างสูงสุด */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* คอนเทนเนอร์สำหรับฟอร์มและประวัติ */
+.content {
+  display: flex;
+  flex-wrap: nowrap; /* ไม่ให้ห่อบรรทัด */
+  justify-content: center; /* จัดให้อยู่กลาง */
+  align-items: flex-start;
+  gap: 40px; /* เพิ่มระยะห่างระหว่างฟอร์ม */
+}
+
+/* คอนเทนเนอร์ฟอร์มการจอง */
+.reservationContainer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  color: var(--text-color);
+  padding: 20px;
+  margin: 0 auto; /* จัดให้อยู่กลาง */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* จัดองค์ประกอบภายในให้อยู่กลาง */
+}
+
+/* คอนเทนเนอร์ประวัติการนัดหมาย */
+.appointmentsContainer {
+  flex: 2; /* เพิ่มเพื่อขยายความกว้าง */
+  min-width: 300px;
+  max-width: 900px; /* เพิ่มความกว้างสูงสุด */
+  background-color: var(--primary-color); /* เปลี่ยนพื้นหลังเป็นสีเดียวกับฟอร์มจอง */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* จัดให้อยู่กลาง */
+}
+
+/* การตกแต่งหัวเรื่อง */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.title svg {
+  margin-right: 10px;
+}
+
+/* การตกแต่งฟอร์ม */
+.form {
+  width: 100%;
+  max-width: 400px; /* กำหนดความกว้างสูงสุด */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* จัดให้อยู่กลาง */
+}
+
+/* การตกแต่ง label */
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.label svg {
+  margin-right: 5px;
+}
+
+/* การตกแต่ง input */
+.input,
+.select,
+.textarea {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--accent-color);
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* การตกแต่งปุ่ม */
+.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 5px; /* ปรับมาร์จิ้นให้มีระยะห่างด้านข้าง */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  color: black; /* สีข้อความในปุ่มทั่วไปเป็นสีดำ */
+  background-color: var(--button-color);
+}
+
+.button svg {
+  margin-right: 5px;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+/* ปุ่มยืนยันการจอง */
+.submitButton {
+  background-color: var(--button-color);
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  background-color: #a0e0bf;
+}
+
+/* ปุ่มแก้ไข */
+.editButton {
+  background-color: var(--button-color);
+}
+
+.editButton:hover {
+  background-color: #a0e0bf;
+}
+
+/* ปุ่มลบ */
+.deleteButton {
+  background-color: var(--delete-button-color);
+}
+
+.deleteButton:hover {
+  background-color: #e60000;
+}
+
+/* ปุ่มแชท */
+.chatButton {
+  background-color: var(--chat-button-color);
+  position: relative;
+  color: white; /* สีข้อความในปุ่มแชทเป็นสีขาว */
+}
+
+.chatButton:hover {
+  background-color: #3399ff;
+}
+
+/* คอนเทนเนอร์สำหรับปุ่มแก้ไขและลบ */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* แสดงจำนวนข้อความใหม่ */
+.notificationBadge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.3em;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 0.8em;
+}
+
+/* การตกแต่งตาราง */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลางในทุกเซลล์ */
+  font-size: 14px;
+  white-space: nowrap; /* ป้องกันการห่อของข้อความ */
+}
+
+.table th {
+  background-color: var(--button-color); /* สีพื้นหลังหัวตาราง */
+  color: var(--text-color); /* เปลี่ยนสีข้อความในหัวตารางเป็นสีดำ */
+  font-weight: bold;
+}
+
+/* เพิ่มส่วนนี้เพื่อกำหนดพื้นหลังเซลล์ตารางเป็นสีขาว */
+.table td {
+  background-color: white;
+}
+
+.doctorColumn {
+  width: 200px; /* ปรับความกว้างตามต้องการ */
+  text-align: center; /* จัดข้อความในคอลัมน์แพทย์ให้อยู่ตรงกลาง */
+}
+
+@media screen and (min-width: 768px) {
+  .doctorColumn {
+    width: 250px;
+  }
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ข้อความเมื่อไม่มีการจอง */
+.noAppointments {
+  color: var(--text-color);
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* การแบ่งหน้า */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pageButton {
+  background-color: var(--button-color);
+  color: black; /* เปลี่ยนสีข้อความในปุ่มเป็นสีดำ */
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pageButton:disabled {
+  background-color: var(--accent-color);
+  cursor: not-allowed;
+}
+
+.pageButton:hover:not(:disabled) {
+  background-color: #a0e0bf;
+}
+
+.pageInfo {
+  font-size: 16px;
+  color: var(--text-color);
+  margin: 0 10px;
+}
+
+/* การตอบสนองต่อหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column;
+      flex-wrap: wrap; /* อนุญาตให้ห่อบรรทัดในหน้าจอเล็ก */
+  }
+  .reservationContainer,
+  .appointmentsContainer {
+      margin: 0 auto 20px auto;
+      max-width: 100%;
+  }
+}

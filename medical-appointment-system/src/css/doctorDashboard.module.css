@@ -1,0 +1,91 @@
+.dashboardBackground {
+    background: #fff;
+}
+
+.doctorDashboardContainer {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.table th, .table td {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.table th {
+    background-color: #0dcab4;
+    color: white;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table tr:hover {
+    background-color: #f1f3f5;
+}
+
+.confirmButton, .cancelButton {
+    width: 100px; /* กำหนดขนาดเท่ากันสำหรับปุ่ม */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmButton {
+    background-color: #28a745; /* สีเขียวสำหรับปุ่มยืนยัน */
+}
+
+.confirmButton svg {
+    margin-right: 5px;
+}
+
+.confirmButton:hover {
+    background-color: #218838;
+}
+
+.cancelButton {
+    background-color: #dc3545; /* สีแดงสำหรับปุ่มยกเลิก */
+}
+
+.cancelButton svg {
+    margin-right: 5px;
+}
+
+.cancelButton:hover {
+    background-color: #c82333; /* สีแดงเข้มขึ้นเมื่อ hover */
+}
+
+.noAppointments {
+    color: #ff4757;
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center;
+}

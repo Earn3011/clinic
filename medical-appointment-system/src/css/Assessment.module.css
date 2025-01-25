@@ -1,0 +1,166 @@
+.assessmentContainer {
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.scoreBox h3 {
+  margin-top: 20px;  /* ระยะห่างด้านบน */
+  margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+
+.resultMessage {
+  text-align: center; /* ทำให้ข้อความอยู่ตรงกลาง */
+  margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+.resultMessage p {
+  text-align: center; /* ทำให้ข้อความภายในแท็ก <p> อยู่ตรงกลาง */
+}
+
+.assessmentForm {
+  display: block; /* เปลี่ยนเป็น block เพื่อให้ฟอร์มยาวลงมา */
+  width: 100%;
+}
+
+.questionWrapper {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.questionText {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333 !important;
+}
+
+.sliderWrapper {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc !important;
+  font-size: 16px;
+  padding: 10px;
+  background-color: #b2e7cc;
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+  padding: 0 5px;
+  position: relative;
+  top: -10px;
+}
+
+.submitButton {
+  padding: 15px 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccf6e0;
+  box-shadow: 0px 4px 6px #b2e7cc;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #b2e7cc;
+  box-shadow: 0px 6px 8px #a3d8b9;
+}
+
+.scoreBox {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #333;
+}
+
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historyTable th, .historyTable td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.historyTable th {
+  background-color: #ccf6e0;
+  color: #333;
+  font-weight: bold;
+}
+
+.historyTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.historyTable tr:hover {
+  background-color: #e1f7e7;
+}
+
+.historyTable td {
+  color: #555;
+  font-size: 16px;
+}
+
+.historyMessage {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end; /* ทำให้ปุ่มไปทางขวามือ */
+  margin-top: 10px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
