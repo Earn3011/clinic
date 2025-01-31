@@ -1008,14 +1008,14 @@ app.post('/sendemail', (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'Araya.chay@ku.th',
-                pass: 'Earnny3011@'  // ตรวจสอบให้แน่ใจว่าเป็น App-specific password
+                user: 'Youremail@gmail.com',
+                pass: 'Yourpassword'  // ตรวจสอบให้แน่ใจว่าเป็น App-specific password
             }
         });
 
         // ตั้งค่า mailOptions สำหรับการส่งอีเมล
         const mailOptions = {
-            from: 'Araya.chay@ku.th',
+            from: 'Youremail@gmail.com',
             to: email,
             subject: 'Appointment Status Update',
             html: `<p>Your appointment at <b>${formattedDate}</b> <b>${time}</b> has been <b>${status}</b>.</p>` // เนื้อหาอีเมลพร้อมวันที่ที่ฟอร์แมตแล้ว
